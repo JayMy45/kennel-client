@@ -50,11 +50,14 @@ export const EmployeeForm = () => {
           <label htmlFor="location">Assign to location: </label>
           <select defaultValue="" name="location" ref={location} id="employeeLocation" className="form-control" >
             <option value="0">Select a location</option>
-            {locations.map(e => (
-              <option key={e.id} value={e.id}>
-                {e.name}
-              </option>
-            ))}
+
+            {
+              locations.map(e => (
+                <option key={e.id} value={e.id}>
+                  {e.name}
+                </option>
+
+              ))}
           </select>
         </div>
       </fieldset>

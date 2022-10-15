@@ -7,9 +7,14 @@
 .navbar__item {
     flex-basis: 20%;
     list-style-type: none;
+    padding: 5px;
 }
 
 .navbar__logout {
     margin-left: auto;
 }
 
+.left-margin {
+    margin: 1%;
+    padding: 1%;
+}

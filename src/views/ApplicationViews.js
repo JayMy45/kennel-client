@@ -11,6 +11,7 @@ import { EmployeeDetail } from '../components/employee/EmployeeDetail'
 import { Login } from "../components/auth/Login"
 import { Register } from "../components/auth/Register"
 import { useEffect } from "react"
+import { AddEmployeeForm } from "../components/employee/AddEmployeeForm"
 
 export const ApplicationViews = () => {
 	let navigate = useNavigate();
@@ -39,6 +40,7 @@ export const ApplicationViews = () => {
 			<Route path="/employees">
 				<Route index element={<EmployeeList />} />
 				<Route path="create" element={<EmployeeForm />} />
+				<Route path="create/employee" element={<AddEmployeeForm />} />
 				<Route path="edit/:employeeId" element={<EmployeeForm />} />
 				<Route path=":employeeId" element={<EmployeeDetail />} />
 			</Route>

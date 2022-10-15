@@ -2,11 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
+}
 
-  .employee {
-      flex-basis: 28%;
-      margin: 1em;
-      padding: 1em;
-      border: 1px solid goldenrod;
-  }
+.employee {
+    flex-basis: 28%;
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid goldenrod;
+}
+
+.btn-employee {
+    margin: 1%;
+}

@@ -16,7 +16,11 @@ export const EmployeeList = () => {
     <div style={{ margin: "0rem 3rem" }}>
       <h1>Employees</h1>
 
-      <button onClick={() => navigate("/employees/create")}>
+      <button className="btn-employee" onClick={() => navigate("/employees/create/employee")}>
+        Create New Employee
+      </button>
+
+      <button className="btn-employee" onClick={() => navigate("/employees/create")}>
         Add Employee
       </button>
 
