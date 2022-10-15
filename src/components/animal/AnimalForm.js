@@ -5,8 +5,8 @@ import { useParams, useNavigate } from 'react-router-dom'
 
 export const AnimalForm = () => {
   const [locations, setLocations] = useState([])
-  const { animalId } = useParams()
   const [animal, setAnimal] = useState({})
+  const { animalId } = useParams()
   const navigate = useNavigate()
 
   const handleControlledInputChange = (event) => {
@@ -28,7 +28,7 @@ export const AnimalForm = () => {
   }, [animalId])
 
   const constructNewAnimal = () => {
-    const locationId = parseInt(animal.location_id)
+    const locationId = parseInt(animal.locationId)
 
     if (locationId === 0) {
       window.alert("Please select a location")
@@ -39,7 +39,7 @@ export const AnimalForm = () => {
           id: animal.id,
           name: animal.name,
           breed: animal.breed,
-          locationId: locationId,
+          location_id: locationId,
           status: animal.status,
           customerId: parseInt(localStorage.getItem("kennels_customer"))
         })
@@ -49,9 +49,9 @@ export const AnimalForm = () => {
         addAnimal({
           name: animal.name,
           breed: animal.breed,
-          locationId: locationId,
+          location_id: locationId,
           status: animal.status,
-          customerId: parseInt(localStorage.getItem("kennels_customer"))
+          customer_id: parseInt(localStorage.getItem("kennels_customer"))
         })
           .then(() => navigate("/animals"))
       }
@@ -90,7 +90,7 @@ export const AnimalForm = () => {
 
             <option value="0">Select a location</option>
             {
-              locations.map(e => (
+              locations.map((e) => (
                 <option key={e.id} value={e.id}>
                   {e.name}
                 </option>
